@@ -1,6 +1,6 @@
 # Lidando com commits perdidos
 
-Em alguns momentos podemos, devido ao exercício de forças ocultas, podemos perder algumas alterações de forma misteriosa. Mas desde que tenha sido feito o commit, as alterações podem ser recuperadas de algumas formas:
+Em alguns momentos, devido ao exercício de forças ocultas, podemos perder algumas alterações de forma misteriosa. Mas, desde que tenha sido feito o commit, as alterações podem ser recuperadas de algumas formas, tais como:
 
 ## Utilizando reflog
 
@@ -14,7 +14,7 @@ gitk --all --date-order $(git log -g --pretty=%H) # Mostra as alterações na tr
 
 ## Achados e perdidos
 
-Commits e arquivos modificados as vezes podem se perder em resets, rebases e merges. Essas informações ficam 'penduradas' e fora do alcance de qualquer referencia, mas podem ser achadas utilizando o fsck.
+Commits e arquivos modificados as vezes podem se perder em resets, rebases e merges. Essas informações ficam 'penduradas' e fora do alcance de qualquer referência, mas podem ser achadas utilizando o fsck.
 
 ```shell
 git fsck | grep "dangling commit" | awk '{print $3;}' # Verifica a existência de commits pendurados no database local
