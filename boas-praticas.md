@@ -47,7 +47,7 @@ Temos a seguinte estrutura:
 <tipo>(<escopo>): <assunto>
 ```
 
-A presença do <tipo> e <assunto> na mensagem de commit é obrigatório, enquanto o escopo é opcional.
+A presença do tipo e assunto na mensagem de commit é obrigatório, enquanto o escopo é opcional.
 
 Com relação ao tipo dos commits, temos os seguintes:
 
@@ -60,3 +60,9 @@ Com relação ao tipo dos commits, temos os seguintes:
 * refactor: Alterações de código que não corrigem bugs nem adicionam novas features
 * style: Alterações que não alteram a razão do código (white-space, formatação, etc)
 * test: Novos testes ou correções em testes já existentes
+
+Em assunto, temos as seguintes regras:
+
++ Use verbos no imperativo: 'corrige' e não 'corrigido', 'corrigindo'
++ Não use letra maiúscula na primeira letra do assunto
++ Não encerre o assunto com ponto (.)
