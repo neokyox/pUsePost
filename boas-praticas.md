@@ -14,18 +14,18 @@ Quando executamos o git log ou usamos o gitk percebemos o quanto uma mensagem de
 
 Ruim:
 
-```shell
+```
 'corrigindo erro'
-'Removendo códigos inuteis'
+'Removendo códigos inúteis'
 ```
 
 Os commits acima não dizem a qual parte do sistema estão referidos, nem quais arquivos. Somos obrigados a checar todo o diff para exatamente o que e onde foram feitas alterações.
 
 Bom:
 
-```shell
+```
 'docs(README): atualiza o README para a versão 1.6.1'
-'fix(Processos): corrige erro de translate3d no switch do style guide'
+'fix(Processos): corrige erro de translate3d no switch do style guide'          
 ```
 
 Em ambos casos acima, conseguimos entender o tipo de alteração, em qual o módulo a tarefa foi executada e o que foi feito.
