@@ -6,7 +6,10 @@ Boas práticas podem variar de ambiente pra ambiente, porém esse modelo foi bas
 
 *If you force good commit practices consistently, you will be able to drive the engineering culture and the code itself to a better state.*
 
-Fazer commits mais cedo e com maior frequência ajuda a previnir a perda de dados, assim como também nos ajuda a identificar a partir de qual momento a feature quebrou na sua branch local. Ao se trabalhar com git podemos seguir as seguintes regras para commits:
+Fazer commits mais cedo e com maior frequência ajuda a previnir a perda de dados, assim como também nos ajuda a identificar a partir de qual momento a feature quebrou na sua branch local.
+Criar o hábito de fazer commits regularmente tem uma série de benefícios. Você pode voltar para qualquer ponto do seu código commitado anteriormente caso seu código 'saia dos trilhos'. Mas o melhor mesmo é o impacto positivo no seu código.
+
+Ao se trabalhar com git podemos seguir as seguintes regras para commits:
 
 + Se é difícil dar nomes talvez seja melhor quebrar o commit antes.
 + Mais commits é melhor que menos commits.
