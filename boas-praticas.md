@@ -4,7 +4,14 @@ Boas práticas podem variar de ambiente pra ambiente, porém esse modelo foi bas
 
 ## Aumente a frequência de commits
 
-Fazer commits mais cedo e com maior frequência ajuda a previnir a perda de dados, assim como também nos ajuda a identificar a partir de qual momento a feature quebrou. Ao se trabalhar com git, fml fml fml
+Fazer commits mais cedo e com maior frequência ajuda a previnir a perda de dados, assim como também nos ajuda a identificar a partir de qual momento a feature quebrou na sua branch local. Ao se trabalhar com git podemos seguir as seguintes regras para commits:
+
++ Se é difícil dar nomes talvez seja melhor quebrar o commit antes.
++ Mais commits é melhor que menos commits.
++ É interessante colocar o número da issue no commit para ajudar a minerar o histórico
++ Commits não deveriam quebrar o build (serem atômicos).
++ Commits de funcionalidade não devem conter mudança de estilo, espaçamento, etc
++ Commits não deveriam necessitar mais de 5 a 10 minutos para serem compreendidos e revisados
 
 ## Crie mensagens de commit mais úteis
 
@@ -14,7 +21,7 @@ Quando executamos o git log ou usamos o gitk percebemos o quanto uma mensagem de
 
 Ruim:
 
-```
+```sh
 'corrigindo erro'
 'Removendo códigos inúteis'
 ```
@@ -23,7 +30,7 @@ Os commits acima não dizem a qual parte do sistema estão referidos, nem quais 
 
 Bom:
 
-```
+```sh
 'docs(README): atualiza o README para a versão 1.6.1'
 'fix(Processos): corrige erro de translate3d no switch do style guide'          
 ```
@@ -66,3 +73,60 @@ Em assunto, temos as seguintes regras:
 + Use verbos no imperativo: 'corrige' e não 'corrigido', 'corrigindo'
 + Não use letra maiúscula na primeira letra do assunto
 + Não encerre o assunto com ponto (.)
+
+```sh
+
++------------+     +----+     +----+     +----+     +----+
+| experiment | --> | c4 | --> | c2 | --> | c1 | --> | c0 |
++------------+     +----+     +----+     +----+     +----+
+                                ^
+                                |
+                                |
++------------+     +----+       |
+|   master   | --> | c3 | ------+
++------------+     +----+
+
+```
+
+Coloca o histórico da branch atual(experiment)  no topo do estado
+atual da master.
+
+```sh
+git checkout experiment
+git rebase master
+
+```
+
+```sh
++------------+     +----+     +--------+     +----+     +----+     +----+
+| experiment | --> | c4 | --> |   c3   | --> | c2 | --> | c1 | --> | c0 |
++------------+     +----+     +--------+     +----+     +----+     +----+
+                                ^
+                                |
+                                |
+                              +--------+
+                              | master |
+                              +--------+
+```
+
+Transfere pra master as mudanças feitas em exeriment
+
+```sh
+git checkout master
+git merge experiment
+
+```
+
+```sh
++------------+     +--------+     +----+     +----+     +----+     +----+
+| experiment | --> |   c4   | --> | c3 | --> | c2 | --> | c1 | --> | c0 |
++------------+     +--------+     +----+     +----+     +----+     +----+
+                     ^
+                     |
+                     |
+                   +--------+
+                   | master |
+                   +--------+
+```
+
+**Dica**: Rebase reescreve histórico, então nunca faça rebase em histórico compartilhado.
