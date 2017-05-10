@@ -74,6 +74,8 @@ Em assunto, temos as seguintes regras:
 + Não use letra maiúscula na primeira letra do assunto
 + Não encerre o assunto com ponto (.)
 
+## Rebase
+
 ```sh
 
 +------------+     +----+     +----+     +----+     +----+
