@@ -59,7 +59,7 @@ Temos a seguinte estrutura:
 <tipo>(<escopo>): <assunto>
 ```
 
-A presença do tipo e assunto na mensagem de commit é obrigatório, enquanto o escopo é opcional.
+A presença do tipo e assunto na mensagem de commit é obrigatória, enquanto o escopo é opcional.
 
 Com relação ao tipo dos commits, temos os seguintes:
 
