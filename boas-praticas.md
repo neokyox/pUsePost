@@ -4,6 +4,8 @@ Boas práticas podem variar de ambiente pra ambiente, porém esse modelo foi bas
 
 ## Aumente a frequência de commits
 
+*If you force good commit practices consistently, you will be able to drive the engineering culture and the code itself to a better state.*
+
 Fazer commits mais cedo e com maior frequência ajuda a previnir a perda de dados, assim como também nos ajuda a identificar a partir de qual momento a feature quebrou na sua branch local. Ao se trabalhar com git podemos seguir as seguintes regras para commits:
 
 + Se é difícil dar nomes talvez seja melhor quebrar o commit antes.
@@ -73,62 +75,3 @@ Em assunto, temos as seguintes regras:
 + Use verbos no imperativo: 'corrige' e não 'corrigido', 'corrigindo'
 + Não use letra maiúscula na primeira letra do assunto
 + Não encerre o assunto com ponto (.)
-
-## Rebase
-
-```sh
-
-+------------+     +----+     +----+     +----+     +----+
-| experiment | --> | c4 | --> | c2 | --> | c1 | --> | c0 |
-+------------+     +----+     +----+     +----+     +----+
-                                ^
-                                |
-                                |
-+------------+     +----+       |
-|   master   | --> | c3 | ------+
-+------------+     +----+
-
-```
-
-Coloca o histórico da branch atual(experiment)  no topo do estado
-atual da master.
-
-```sh
-git checkout experiment
-git rebase master
-
-```
-
-```sh
-+------------+     +----+     +--------+     +----+     +----+     +----+
-| experiment | --> | c4 | --> |   c3   | --> | c2 | --> | c1 | --> | c0 |
-+------------+     +----+     +--------+     +----+     +----+     +----+
-                                ^
-                                |
-                                |
-                              +--------+
-                              | master |
-                              +--------+
-```
-
-Transfere pra master as mudanças feitas em exeriment
-
-```sh
-git checkout master
-git merge experiment
-
-```
-
-```sh
-+------------+     +--------+     +----+     +----+     +----+     +----+
-| experiment | --> |   c4   | --> | c3 | --> | c2 | --> | c1 | --> | c0 |
-+------------+     +--------+     +----+     +----+     +----+     +----+
-                     ^
-                     |
-                     |
-                   +--------+
-                   | master |
-                   +--------+
-```
-
-**Dica**: Rebase reescreve histórico, então nunca faça rebase em histórico compartilhado.
