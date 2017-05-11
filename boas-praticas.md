@@ -37,7 +37,7 @@ Bom:
 
 ```sh
 'docs(README): atualiza o README para a versão 1.6.1'
-'fix(Processos): corrige erro de translate3d no switch do style guide'          
+'fix(Processos): corrige translate3d no switch do style guide'          
 ```
 
 Em ambos casos acima, conseguimos entender o tipo de alteração, em qual o módulo a tarefa foi executada e o que foi feito.
