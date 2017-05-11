@@ -42,7 +42,7 @@ Já um dos pontos negativos é: rebase exige um conhecimento mais elevado sobre 
 
 ### Always Rebase
 
-Consideremos o *Always Rebase* com o seguinte exemplo: Quando o desenvolvimento de uma feature está completa, fazemos o rebase / squash dos itens da branch reduzindo os mesmos a um número significante de commits e evitando criar um commit de merge - podemos usar o --ff ou cherry-pick na branch destino.
+Consideremos o *Always Rebase* com o seguinte exemplo: Quando o desenvolvimento de uma feature está completa, fazemos o rebase / squash dos itens da branch reduzindo os mesmos a um número significante de commits e evitando criar um commit de merge - podemos usar o "--ff" ou "cherry-pick" na branch destino.
 
 Enquando a branch de feature estiver em desenvolvimento e precisamos manter a mesma atualizada, usamos o rebase - ao invés de pull ou merge - para não poluir o histórico.
 
@@ -59,12 +59,13 @@ Enquando a branch de feature estiver em desenvolvimento e precisamos manter a me
 - Rebase pode ser perigoso. Reescrever o histórico de branches compartilhadas tende a quebrar o fluxo de trabalho.
 
 Nota: Quando o histórico de uma branch utilizada por vários desenvolvedores é reescrito, ocorre uma quebra geral em todas a branchs em desenvolvimento derivada da mesma.
+
 ### Always Merge
 
 
 Consideremos o *Always Merge* no exemplo a seguir: Quando uma branch de uma feature é finalizada, fazemos um merge para a branch destino (master, develop ou rc).
 
-Tenha certeza de fazer o merge com o comando --no-ff, que obriga o git a manter uma mensagem de commit em todos os casos
+Tenha certeza de fazer o merge com o comando "--no-ff", que obriga o git a manter uma mensagem de commit em todos os casos
 
 #### Prós
 
