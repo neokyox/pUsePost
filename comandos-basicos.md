@@ -66,4 +66,15 @@ git commit -m 'primeiro commit'
 git push
 ```
 
+## Consultando o histórico
 
+```sh
+# Consultando histórico via bash
+git log
+
+# Consultando histórico de forma resumida
+git log --pretty=oneline
+
+# Consultando via GUI
+gitk
+```
