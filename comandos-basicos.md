@@ -47,10 +47,23 @@ git push --all origin
 git push origin :<nome-da-branch>
 ```
 
-git add
+## Commits
 
-git commit 
-
-git push
-
+```sh
+# Mostra os arquivos alterados desde seu último commit
 git status
+
+# Adiciona um arquivo específico
+git add <arquivo>
+
+# Adiciona todos os arquivos do diretório
+git add .
+
+# Cria um commit
+git commit -m 'primeiro commit'
+
+# Envia o commit para o repositório remoto
+git push
+```
+
+
