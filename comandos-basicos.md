@@ -22,19 +22,27 @@ git clone né.
 
 ## Branches
 
+Branches são utilizadas para desenvolver funcionalidades isoladas umas das outras.
+
 ```sh
 # Cria uma nova branch e muda para a mesma:
 git checkout -b <nome-da-branch>
+
 # Muda de uma branch para outra:
 git checkout <nome-da-branch>
+
 # Lista todas as branches no seu repositório e também indica sua branch atual:
 git branch
+
 # Deleta uma branch:
 git branch -d <nome-da-branch>
+
 # Faz o push da branch para o repositório remoto:
 git push origin <nome-da-branch>
+
 # Faz o push de todas as branchs para o repositório remoto:
 git push --all origin
+
 # Deleta a branch no repositório remoto:
 git push origin :<nome-da-branch>
 ```
@@ -46,6 +54,3 @@ git commit
 git push
 
 git status
-
-git checkout
-
