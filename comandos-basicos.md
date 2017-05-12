@@ -18,7 +18,9 @@ $ git config --global --list
 
 ## Clonar um repositório
 
-git clone né.
+```sh
+$ git clone git://git.seu-servidor
+```
 
 ## Branches
 
